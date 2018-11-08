@@ -1,0 +1,29 @@
+{
+  "name": "fx-y",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Shane Holloway <shane.holloway@ieee.org>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsy-lang/node-fx-y.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsy-lang/node-fx-y/issues"
+  },
+  "homepage": "https://github.com/jsy-lang/node-fx-y#readme",
+  "bin": {
+    "fx-y": "./fx-y.js"
+  },
+  "files": [
+    "fx-y.js",
+    "src"
+  ],
+  "main": "./src/index.js",
+  "dependencies": {
+    "@medv/prettyjson": "^1.0.1",
+    "fx": "^3.0.3",
+    "jsy-transpile": "^0.5.7"
+  },
+  "devDependencies": {}
+}
