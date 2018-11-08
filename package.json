@@ -1,22 +1,22 @@
 {
-  "name": "fx-y",
-  "version": "0.0.0",
-  "description": "",
+  "name": "fx-jsy",
+  "version": "0.0.3",
+  "description": "Combine the excelent `fx` utility with JSY syntax",
   "author": "Shane Holloway <shane.holloway@ieee.org>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jsy-lang/node-fx-y.git"
+    "url": "git+https://github.com/jsy-lang/node-fx-jsy.git"
   },
   "bugs": {
-    "url": "https://github.com/jsy-lang/node-fx-y/issues"
+    "url": "https://github.com/jsy-lang/node-fx-jsy/issues"
   },
-  "homepage": "https://github.com/jsy-lang/node-fx-y#readme",
+  "homepage": "https://github.com/jsy-lang/node-fx-jsy#readme",
   "bin": {
-    "fx-y": "./fx-y.js"
+    "fx-jsy": "./fx-jsy.js"
   },
   "files": [
-    "fx-y.js",
+    "fx-jsy.js",
     "src"
   ],
   "main": "./src/index.js",
