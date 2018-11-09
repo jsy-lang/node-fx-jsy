@@ -21,7 +21,10 @@ function jsy_reducer(json, jsy_code, index) {
   else if (/^this/.test(code))
     fn = as_expression(code)
 
-  else if (/^\.|^\[/.test(code))
+  else if (/^\.\[/.test(code))
+    fn = as_implicit_this_expression(code.slice(1))
+
+  else if (/^\./.test(code))
     fn = as_implicit_this_expression(code)
 
   else fn = as_expression(code)

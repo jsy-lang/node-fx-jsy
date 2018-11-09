@@ -34,8 +34,8 @@ A more complex example converting JSON to CSV:
 
 ```bash
 $ curl https://jsonplaceholder.typicode.com/posts | fx-jsy \
-    '.reduce( (r, e, i) => (i==0 ? r.push( Object.keys(e), Object.values(e) ) : r.push( Object.values(e) )) && r, [] )' \
-    '.map @ ea => ea.map @ val => Number( val ) ? val : `"${ val }"`' \
+    '[ Object.keys(this[0]) ].concat @ this.map @ ea => Object.values(ea)' \
+    '.map @ ea => ea.map @ val => JSON.stringify(val)' \
     '.map @ ea => ea.join @ `,`' \
     '.join @ `\n`' \
     > test.csv
