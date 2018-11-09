@@ -1,6 +1,6 @@
 {
   "name": "fx-jsy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Combine the excelent `fx` utility with JSY syntax",
   "author": "Shane Holloway <shane.holloway@ieee.org>",
   "license": "MIT",

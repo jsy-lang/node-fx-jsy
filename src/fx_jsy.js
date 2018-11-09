@@ -22,10 +22,10 @@ function jsy_reducer(json, jsy_code, index) {
     fn = as_expression(code)
 
   else if (/^\.\[/.test(code))
-    fn = as_implicit_this_expression(code.slice(1))
+    fn = as_expression('this' + code.slice(1))
 
   else if (/^\./.test(code))
-    fn = as_implicit_this_expression(code)
+    fn = as_expression('this' + code.replace(/^\.(\d+)/, '[$1]'))
 
   else fn = as_expression(code)
 
@@ -48,11 +48,6 @@ function as_expression(code) {
   return eval(`(function() {
     return (${code}) })` ) }
 
-function as_implicit_this_expression(code) {
-  return eval(`(function() {
-    return (this${code}) })` ) }
-
-
 
 
 module.exports = exports = Object.assign(jsy_reducer, {
@@ -60,6 +55,5 @@ module.exports = exports = Object.assign(jsy_reducer, {
   as_callable,
   as_generator,
   as_expression,
-  as_implicit_this_expression
 })
 
