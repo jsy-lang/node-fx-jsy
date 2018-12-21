@@ -1,6 +1,6 @@
 {
   "name": "fx-jsy",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Combine the excelent `fx` utility with JSY syntax",
   "author": "Shane Holloway <shane.holloway@ieee.org>",
   "license": "MIT",
@@ -22,8 +22,8 @@
   "main": "./src/index.js",
   "dependencies": {
     "@medv/prettyjson": "^1.0.1",
-    "fx": "^3.0.3",
-    "jsy-transpile": "^0.5.7"
+    "fx": "^10.0.0",
+    "jsy-transpile": "^0.5.8"
   },
   "devDependencies": {}
 }
